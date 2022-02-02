@@ -1,5 +1,5 @@
 def stringRep (str)
-    return str.gsub(" is ", " IS ")
+    return str.gsub(/\b(is)\b/, "IS")
 end
 
 replacedStr = stringRep ("This is book iss nothing.")

@@ -1,15 +1,12 @@
 def frequency (string)
-   new_str = string.gsub(" ", "").split("")
-   freq = Hash.new
-   new_str.each{ |i| 
-   if freq.has_key?(i)
+   string = string.split("")
+   freq = Hash.new(0)
+   string.each do |i| 
     freq[i]+=1
-   else
-    freq[i]=1
    end
-}
-return freq 
+
+freq 
 end
 
-hash= frequency ("Hello world")
+hash = frequency ("Hello world")
 puts hash
